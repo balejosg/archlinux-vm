@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descarga Arch Linux VM - VirtualBox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20">
+          A
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight text-white">Arch Linux VM</h1>
+          <p class="text-xs text-cyan-400 font-medium">VirtualBox Appliance (.ova)</p>
+        </div>
+      </div>
+      <a href="https://github.com/balejosg/archlinux-vm" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white transition flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <div class="text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-medium">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        Versión Oficial Preparada • Listo para usar
+      </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+        Máquina Virtual <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Arch Linux</span>
+      </h2>
+      <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
+        Descarga e importa la máquina en VirtualBox en menos de 2 minutos. Viene con usuario configurado, permisos de administrador (sudo) y servidor SSH activo.
+      </p>
+
+      <!-- Download Button -->
+      <div class="pt-6">
+        <a href="https://github.com/balejosg/archlinux-vm/releases/download/v1.0.0/ArchLinux.ova" 
+           class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 font-bold text-white shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition transform hover:-translate-y-0.5 active:translate-y-0 text-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          Descargar ArchLinux.ova
+          <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-medium ml-1">599 MB</span>
+        </a>
+        <p class="text-xs text-slate-500 mt-2">Compatible con Windows, macOS y Linux con VirtualBox 7.x</p>
+      </div>
+    </div>
+
+    <!-- Credentials Card -->
+    <div class="mt-12 bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 md:p-8 backdrop-blur shadow-xl">
+      <h3 class="text-xl font-bold text-white flex items-center gap-2 mb-6">
+        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
+        </svg>
+        Credenciales de Acceso
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Usuario</span>
+            <p class="text-lg font-bold text-cyan-300">alumno</p>
+          </div>
+          <button onclick="navigator.clipboard.writeText('alumno')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1.5 rounded-lg border border-slate-700 transition">Copiar</button>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Contraseña</span>
+            <p class="text-lg font-bold text-cyan-300">alumno</p>
+          </div>
+          <button onclick="navigator.clipboard.writeText('alumno')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1.5 rounded-lg border border-slate-700 transition">Copiar</button>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Permisos Administrador</span>
+            <p class="text-sm font-semibold text-emerald-400">sudo habilitado (contraseña: alumno)</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Conexión SSH</span>
+            <p class="text-sm font-semibold text-amber-400">Puerto 2222 (Reenvío NAT)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="mt-8 bg-slate-800/40 border border-slate-800 rounded-2xl p-6 md:p-8">
+      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+        </svg>
+        Paso a paso: Cómo instalar la máquina
+      </h3>
+
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1</div>
+          <div>
+            <h4 class="font-semibold text-white">Descarga el archivo</h4>
+            <p class="text-sm text-slate-400">Haz clic en el botón superior para descargar <code class="text-cyan-300 bg-slate-900 px-1.5 py-0.5 rounded">ArchLinux.ova</code>.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2</div>
+          <div>
+            <h4 class="font-semibold text-white">Importa en VirtualBox</h4>
+            <p class="text-sm text-slate-400">Abre VirtualBox y haz <strong>doble clic</strong> en el archivo <code class="text-cyan-300 bg-slate-900 px-1.5 py-0.5 rounded">ArchLinux.ova</code> (o ve a <em>Archivo &gt; Importar servicio virtualizado</em>). Deja los valores por defecto y pulsa <strong>Importar</strong>.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3</div>
+          <div>
+            <h4 class="font-semibold text-white">Inicia la máquina</h4>
+            <p class="text-sm text-slate-400">Selecciona <strong>ArchLinux</strong> en la lista de VirtualBox y haz clic en <strong>Iniciar</strong>.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">4</div>
+          <div class="w-full">
+            <h4 class="font-semibold text-white">Conéctate por SSH (Opcional pero recomendado)</h4>
+            <p class="text-sm text-slate-400 mb-2">Abre una terminal en tu propio ordenador y conéctate directamente:</p>
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 flex items-center justify-between">
+              <code class="text-xs md:text-sm text-emerald-400">ssh -p 2222 alumno@127.0.0.1</code>
+              <button onclick="navigator.clipboard.writeText('ssh -p 2222 alumno@127.0.0.1')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded border border-slate-700 transition">Copiar</button>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">Introduce la contraseña <code class="text-cyan-300">alumno</code> cuando te la solicite.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-xs text-slate-500 py-6 border-t border-slate-800">
+      <p>Material preparado para clases prácticas con Arch Linux y VirtualBox.</p>
+    </footer>
+  </main>
+
+</body>
+</html>
