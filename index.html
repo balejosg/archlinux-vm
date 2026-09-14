@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descarga Arch Linux VM - VirtualBox</title>
+  <title>Descarga Arch Linux VM (AI Agents Ready) - VirtualBox</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
         </div>
         <div>
           <h1 class="font-bold text-lg leading-tight text-white">Arch Linux VM</h1>
-          <p class="text-xs text-cyan-400 font-medium">VirtualBox Appliance (.ova)</p>
+          <p class="text-xs text-cyan-400 font-medium">VirtualBox Appliance (.ova) • AI Agents Edition</p>
         </div>
       </div>
       <a href="https://github.com/balejosg/archlinux-vm" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white transition flex items-center gap-1.5">
@@ -37,28 +37,28 @@
   <!-- Hero Section -->
   <main class="max-w-4xl mx-auto px-6 py-12">
     <div class="text-center space-y-4">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-medium">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-medium">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-        Versión Oficial Preparada • Listo para usar
+        Actualizada (pacman -Syu) • Teclado España • Agentes de IA incluidos
       </div>
       <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
         Máquina Virtual <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Arch Linux</span>
       </h2>
       <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
-        Descarga e importa la máquina en VirtualBox en menos de 2 minutos. Viene con usuario configurado, permisos de administrador (sudo) y servidor SSH activo.
+        Lista para importar en VirtualBox. Configurada con usuario <code class="text-cyan-300">alumno</code>, permisos de administrador (sudo), servidor SSH, idioma y teclado español, y los entornos de agentes <strong class="text-white">Antigravity CLI</strong>, <strong class="text-white">OpenCode</strong> y <strong class="text-white">Herdr</strong> preinstalados.
       </p>
 
       <!-- Download Button -->
       <div class="pt-6">
-        <a href="https://github.com/balejosg/archlinux-vm/releases/download/v1.0.0/ArchLinux.ova" 
+        <a href="https://github.com/balejosg/archlinux-vm/releases/download/v1.1.0/ArchLinux.ova" 
            class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 font-bold text-white shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition transform hover:-translate-y-0.5 active:translate-y-0 text-lg">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
           </svg>
-          Descargar ArchLinux.ova
-          <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-medium ml-1">599 MB</span>
+          Descargar ArchLinux.ova (v1.1.0)
+          <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-medium ml-1">1015 MB</span>
         </a>
-        <p class="text-xs text-slate-500 mt-2">Compatible con Windows, macOS y Linux con VirtualBox 7.x</p>
+        <p class="text-xs text-slate-500 mt-2">Compatible con Windows, macOS y Linux mediante VirtualBox 7.x</p>
       </div>
     </div>
 
@@ -68,7 +68,7 @@
         <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
         </svg>
-        Credenciales de Acceso
+        Credenciales y Configuración de Sistema
       </h3>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -88,19 +88,74 @@
           <button onclick="navigator.clipboard.writeText('alumno')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1.5 rounded-lg border border-slate-700 transition">Copiar</button>
         </div>
 
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
-          <div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Permisos Administrador</span>
-            <p class="text-sm font-semibold text-emerald-400">sudo habilitado (contraseña: alumno)</p>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Permisos Administrador</span>
+          <p class="text-sm font-semibold text-emerald-400 mt-0.5">sudo habilitado (contraseña: alumno)</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Conexión SSH</span>
+          <p class="text-sm font-semibold text-amber-400 mt-0.5">Puerto 2222 (Reenvío NAT local)</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Idioma y Localización</span>
+          <p class="text-sm font-semibold text-cyan-300 mt-0.5">es_ES.UTF-8 (España)</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Distribución de Teclado</span>
+          <p class="text-sm font-semibold text-cyan-300 mt-0.5">Español (KEYMAP=es / X11 es)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Tools Card -->
+    <div class="mt-8 bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 md:p-8 backdrop-blur shadow-xl">
+      <h3 class="text-xl font-bold text-white flex items-center gap-2 mb-6">
+        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Herramientas de IA y Agentes Preinstaladas
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white">Antigravity CLI</h4>
+            <span class="text-[10px] bg-cyan-950 text-cyan-400 border border-cyan-800 px-2 py-0.5 rounded-full font-mono">agy</span>
+          </div>
+          <p class="text-xs text-slate-400">Plataforma agentica de desarrollo de Google para terminal.</p>
+          <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 font-mono">
+            Comandos: <span class="text-cyan-300">agy</span> o <span class="text-cyan-300">antigravity-cli</span>
           </div>
         </div>
 
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
-          <div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Conexión SSH</span>
-            <p class="text-sm font-semibold text-amber-400">Puerto 2222 (Reenvío NAT)</p>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white">OpenCode</h4>
+            <span class="text-[10px] bg-blue-950 text-blue-400 border border-blue-800 px-2 py-0.5 rounded-full font-mono">opencode</span>
+          </div>
+          <p class="text-xs text-slate-400">Entorno interactivo TUI / CLI de agentes de codificación autónomos.</p>
+          <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 font-mono">
+            Comando: <span class="text-cyan-300">opencode</span>
           </div>
         </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white">Herdr</h4>
+            <span class="text-[10px] bg-purple-950 text-purple-400 border border-purple-800 px-2 py-0.5 rounded-full font-mono">herdr</span>
+          </div>
+          <p class="text-xs text-slate-400">Multiplexor para orquestar y supervisar agentes en paralelo. Conectado a ambos.</p>
+          <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 font-mono">
+            Comando: <span class="text-cyan-300">herdr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 p-3 bg-purple-950/40 border border-purple-800/50 rounded-xl text-xs text-purple-200">
+        ✨ <strong>Integración completa:</strong> Herdr cuenta con los plugins de estado instalados para <code>antigravity-cli</code> y <code>opencode</code>, además de las skills correspondientes para que los agentes puedan interactuar con las terminales de Herdr de forma coordinada.
       </div>
     </div>
 
@@ -110,7 +165,7 @@
         <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
         </svg>
-        Paso a paso: Cómo instalar la máquina
+        Paso a paso: Cómo instalar y arrancar la máquina
       </h3>
 
       <div class="space-y-6">
@@ -134,20 +189,20 @@
           <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3</div>
           <div>
             <h4 class="font-semibold text-white">Inicia la máquina</h4>
-            <p class="text-sm text-slate-400">Selecciona <strong>ArchLinux</strong> en la lista de VirtualBox y haz clic en <strong>Iniciar</strong>.</p>
+            <p class="text-sm text-slate-400">Selecciona <strong>ArchLinux</strong> en VirtualBox y haz clic en <strong>Iniciar</strong>.</p>
           </div>
         </div>
 
         <div class="flex items-start gap-4">
           <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">4</div>
           <div class="w-full">
-            <h4 class="font-semibold text-white">Conéctate por SSH (Opcional pero recomendado)</h4>
+            <h4 class="font-semibold text-white">Conéctate por SSH (Recomendado)</h4>
             <p class="text-sm text-slate-400 mb-2">Abre una terminal en tu propio ordenador y conéctate directamente:</p>
             <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 flex items-center justify-between">
               <code class="text-xs md:text-sm text-emerald-400">ssh -p 2222 alumno@127.0.0.1</code>
               <button onclick="navigator.clipboard.writeText('ssh -p 2222 alumno@127.0.0.1')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded border border-slate-700 transition">Copiar</button>
             </div>
-            <p class="text-xs text-slate-500 mt-1">Introduce la contraseña <code class="text-cyan-300">alumno</code> cuando te la solicite.</p>
+            <p class="text-xs text-slate-500 mt-1">Contraseña: <code class="text-cyan-300">alumno</code></p>
           </div>
         </div>
       </div>
@@ -155,7 +210,7 @@
 
     <!-- Footer -->
     <footer class="mt-12 text-center text-xs text-slate-500 py-6 border-t border-slate-800">
-      <p>Material preparado para clases prácticas con Arch Linux y VirtualBox.</p>
+      <p>Material educativo para prácticas con Arch Linux, VirtualBox y Agentes Autónomos de IA.</p>
     </footer>
   </main>
 
