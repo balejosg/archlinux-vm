@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descarga Arch Linux VM (AI Agents Ready) - VirtualBox</title>
+  <title>Descarga Arch Linux VM (AI Agents + Workspace) - VirtualBox</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
         </div>
         <div>
           <h1 class="font-bold text-lg leading-tight text-white">Arch Linux VM</h1>
-          <p class="text-xs text-cyan-400 font-medium">VirtualBox Appliance (.ova) • AI Agents Edition</p>
+          <p class="text-xs text-cyan-400 font-medium">VirtualBox Appliance (.ova) • Edición Educativa & IA</p>
         </div>
       </div>
       <a href="https://github.com/balejosg/archlinux-vm" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white transition flex items-center gap-1.5">
@@ -39,24 +39,24 @@
     <div class="text-center space-y-4">
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-medium">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-        Actualizada (pacman -Syu) • Teclado España • Agentes de IA incluidos
+        Versión 1.2.0 • Carpeta compartida lista • Agentes IA incluidos
       </div>
       <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
         Máquina Virtual <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Arch Linux</span>
       </h2>
       <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
-        Lista para importar en VirtualBox. Configurada con usuario <code class="text-cyan-300">alumno</code>, permisos de administrador (sudo), servidor SSH, idioma y teclado español, y los entornos de agentes <strong class="text-white">Antigravity CLI</strong>, <strong class="text-white">OpenCode</strong> y <strong class="text-white">Herdr</strong> preinstalados.
+        Lista para importar en VirtualBox. Configurada con usuario <code class="text-cyan-300">alumno</code>, permisos de administrador (sudo), servidor SSH, carpeta de trabajo sincronizada con el anfitrión (<code class="text-cyan-300">~/trabajo</code>) y los entornos de agentes <strong class="text-white">Antigravity CLI</strong>, <strong class="text-white">OpenCode</strong> y <strong class="text-white">Herdr</strong> preinstalados.
       </p>
 
       <!-- Download Button -->
       <div class="pt-6">
-        <a href="https://github.com/balejosg/archlinux-vm/releases/download/v1.1.0/ArchLinux.ova" 
+        <a href="https://github.com/balejosg/archlinux-vm/releases/download/v1.2.0/ArchLinux.ova" 
            class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 font-bold text-white shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition transform hover:-translate-y-0.5 active:translate-y-0 text-lg">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
           </svg>
-          Descargar ArchLinux.ova (v1.1.0)
-          <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-medium ml-1">1015 MB</span>
+          Descargar ArchLinux.ova (v1.2.0)
+          <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-medium ml-1">1014 MB</span>
         </a>
         <p class="text-xs text-slate-500 mt-2">Compatible con Windows, macOS y Linux mediante VirtualBox 7.x</p>
       </div>
@@ -68,7 +68,7 @@
         <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
         </svg>
-        Credenciales y Configuración de Sistema
+        Credenciales y Sistema
       </h3>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -110,6 +110,37 @@
       </div>
     </div>
 
+    <!-- Shared Folder Section -->
+    <div class="mt-8 bg-gradient-to-br from-slate-800/80 to-slate-800/40 border border-cyan-800/40 rounded-2xl p-6 md:p-8 backdrop-blur shadow-xl">
+      <h3 class="text-xl font-bold text-white flex items-center gap-2 mb-4">
+        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+        </svg>
+        📁 Carpeta de Trabajo Compartida (<code class="text-cyan-300">~/trabajo</code>)
+      </h3>
+      <p class="text-sm text-slate-300 mb-6">
+        La máquina virtual viene <strong>preconfigurada</strong> para conectar automáticamente cualquier carpeta de tu ordenador físico con la carpeta <code class="text-cyan-300 font-mono">/home/alumno/trabajo</code> dentro de Linux.
+      </p>
+
+      <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-5 space-y-3 text-sm text-slate-300">
+        <p class="font-semibold text-white">¿Cómo vincularla desde VirtualBox?</p>
+        <ol class="list-decimal list-inside space-y-2 text-slate-300 text-xs md:text-sm">
+          <li>En la ventana de VirtualBox, ve a <strong>Dispositivos ➡️ Carpetas compartidas ➡️ Preferencias de carpetas compartidas...</strong></li>
+          <li>Haz clic en el icono <strong>Añadir carpeta (+)</strong>:
+            <ul class="list-disc list-inside ml-5 mt-1 space-y-1 text-slate-400">
+              <li><strong>Ruta de la carpeta:</strong> Selecciona la carpeta de tu PC (Windows, Mac o Linux) que quieras compartir.</li>
+              <li><strong>Nombre de la carpeta:</strong> Escribe <strong class="text-cyan-300">trabajo</strong></li>
+              <li>Marca las casillas <strong>Automontar</strong> y <strong>Hacer permanente</strong>.</li>
+            </ul>
+          </li>
+          <li>Pulsa <strong>Aceptar</strong>. ¡Y listo! Al arrancar la máquina se montará automáticamente.</li>
+        </ol>
+        <div class="pt-2 border-t border-slate-800 text-xs text-cyan-400">
+          💡 <em>Tip: Si añades la carpeta con la máquina ya encendida, solo abre una terminal y escribe <code class="bg-slate-800 text-white px-2 py-0.5 rounded font-mono">montar-trabajo</code> para montarla al instante sin reiniciar.</em>
+        </div>
+      </div>
+    </div>
+
     <!-- AI Tools Card -->
     <div class="mt-8 bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 md:p-8 backdrop-blur shadow-xl">
       <h3 class="text-xl font-bold text-white flex items-center gap-2 mb-6">
@@ -125,7 +156,7 @@
             <h4 class="font-bold text-white">Antigravity CLI</h4>
             <span class="text-[10px] bg-cyan-950 text-cyan-400 border border-cyan-800 px-2 py-0.5 rounded-full font-mono">agy</span>
           </div>
-          <p class="text-xs text-slate-400">Plataforma agentica de desarrollo de Google para terminal.</p>
+          <p class="text-xs text-slate-400">Plataforma agéntica de desarrollo de Google para terminal.</p>
           <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 font-mono">
             Comandos: <span class="text-cyan-300">agy</span> o <span class="text-cyan-300">antigravity-cli</span>
           </div>
@@ -136,7 +167,7 @@
             <h4 class="font-bold text-white">OpenCode</h4>
             <span class="text-[10px] bg-blue-950 text-blue-400 border border-blue-800 px-2 py-0.5 rounded-full font-mono">opencode</span>
           </div>
-          <p class="text-xs text-slate-400">Entorno interactivo TUI / CLI de agentes de codificación autónomos.</p>
+          <p class="text-xs text-slate-400">Entorno interactivo TUI / CLI de agentes de código autónomos.</p>
           <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 font-mono">
             Comando: <span class="text-cyan-300">opencode</span>
           </div>
@@ -153,10 +184,6 @@
           </div>
         </div>
       </div>
-
-      <div class="mt-4 p-3 bg-purple-950/40 border border-purple-800/50 rounded-xl text-xs text-purple-200">
-        ✨ <strong>Integración completa:</strong> Herdr cuenta con los plugins de estado instalados para <code>antigravity-cli</code> y <code>opencode</code>, además de las skills correspondientes para que los agentes puedan interactuar con las terminales de Herdr de forma coordinada.
-      </div>
     </div>
 
     <!-- Instructions -->
@@ -165,7 +192,7 @@
         <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
         </svg>
-        Paso a paso: Cómo instalar y arrancar la máquina
+        Paso a paso: Instalación rápida
       </h3>
 
       <div class="space-y-6">
@@ -181,7 +208,7 @@
           <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2</div>
           <div>
             <h4 class="font-semibold text-white">Importa en VirtualBox</h4>
-            <p class="text-sm text-slate-400">Abre VirtualBox y haz <strong>doble clic</strong> en el archivo <code class="text-cyan-300 bg-slate-900 px-1.5 py-0.5 rounded">ArchLinux.ova</code> (o ve a <em>Archivo &gt; Importar servicio virtualizado</em>). Deja los valores por defecto y pulsa <strong>Importar</strong>.</p>
+            <p class="text-sm text-slate-400">Abre VirtualBox y haz <strong>doble clic</strong> en el archivo descargado. Deja los valores por defecto y pulsa <strong>Importar</strong>.</p>
           </div>
         </div>
 
@@ -196,7 +223,7 @@
         <div class="flex items-start gap-4">
           <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">4</div>
           <div class="w-full">
-            <h4 class="font-semibold text-white">Conéctate por SSH (Recomendado)</h4>
+            <h4 class="font-semibold text-white">Conéctate por SSH</h4>
             <p class="text-sm text-slate-400 mb-2">Abre una terminal en tu propio ordenador y conéctate directamente:</p>
             <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 flex items-center justify-between">
               <code class="text-xs md:text-sm text-emerald-400">ssh -p 2222 alumno@127.0.0.1</code>
