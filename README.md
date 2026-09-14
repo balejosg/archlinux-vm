@@ -1,12 +1,12 @@
-# Arch Linux VM para VirtualBox (Edición AI Agents + Workspace)
+# Arch Linux VM para VirtualBox (Edición Especial DAM 1 - Tutor IA)
 
-Máquina virtual oficial de Arch Linux configurada y empaquetada en formato `.ova` para uso educativo, desarrollo con agentes de IA y carpetas compartidas con el equipo anfitrión.
+Máquina virtual oficial de Arch Linux configurada específicamente para el módulo de **Programación de 1º de DAM (Desarrollo de Aplicaciones Multiplataforma)**. Diseñada para trabajar de forma sincronizada con **IntelliJ IDEA** en el equipo anfitrión y actuar como un **tutor pedagógico de IA** que guía el aprendizaje sin resolver las tareas por el alumno.
 
 ## 🚀 Descarga
 Puedes descargar el archivo `.ova` listo para importar en VirtualBox desde la web oficial o directamente desde GitHub Releases:
 
 * 🌐 **Página Web / GitHub Pages**: [https://balejosg.github.io/archlinux-vm/](https://balejosg.github.io/archlinux-vm/)
-* 📦 **Descarga directa (.ova, ~1 GB)**: [ArchLinux.ova (v1.2.0)](https://github.com/balejosg/archlinux-vm/releases/download/v1.2.0/ArchLinux.ova)
+* 📦 **Descarga directa (.ova, ~1.7 GB)**: [ArchLinux.ova (v1.3.0)](https://github.com/balejosg/archlinux-vm/releases/download/v1.3.0/ArchLinux.ova)
 
 ---
 
@@ -17,50 +17,42 @@ Puedes descargar el archivo `.ova` listo para importar en VirtualBox desde la we
 | **Usuario** | `alumno` |
 | **Contraseña** | `alumno` |
 | **Permisos** | Administrador completo (`sudo`) |
+| **Java Toolchain** | **OpenJDK 21 LTS** (`java`, `javac`) y **Apache Maven 3.9** |
+| **Herramientas de Análisis** | `ripgrep` (`rg`), `fd`, `tree` |
 | **Carpeta compartida Host** | Preconfigurada en `/home/alumno/trabajo` |
 | **Localización** | España (`es_ES.UTF-8`, zona horaria `Europe/Madrid`) |
 | **Teclado** | Español (`KEYMAP=es`, distribución X11 `es`) |
-| **SSH** | Habilitado (`sshd`) |
-| **Port Forwarding SSH** | Puerto anfitrión `2222` ➡️ Puerto VM `22` |
+| **SSH** | Habilitado (`sshd`) en puerto anfitrión `2222` |
 | **Guest Additions** | `virtualbox-guest-utils` activo |
 
 ---
 
-## 📁 Carpeta Compartida con el Anfitrión (`~/trabajo`)
+## 🎓 Entorno Pedagógico DAM 1
 
-La máquina ya viene preparada para vincular cualquier carpeta de tu ordenador real (Windows, Mac o Linux) directamente en la `$HOME` del alumno:
+### 1. Rol de "Tutor Socrático" Preconfigurado
+Los agentes (`agy` y `opencode`) vienen preconfigurados con directrices docentes obligatorias (`AGENTS.md`):
+* **No hacen la tarea por el alumno:** Proporcionan pistas progresivas y preguntas guía para estimular el razonamiento algorítmico.
+* **Explicación didáctica de excepciones:** Desglosan errores comunes de Java (`NullPointerException`, `IndexOutOfBoundsException`, fallos de compilación) explicando el "por qué" y cómo evitarlos.
+* **Estándares de Código DAM:** Exigen buenas prácticas de POO (atributos privados, `getters`/`setters`, convenciones Java, Javadoc).
+* **Adaptación al temario:** Priorizan algoritmos tradicionales antes que abstracciones complejas.
 
-1. En la ventana de VirtualBox, ve al menú superior:  
-   **Dispositivos** ➡️ **Carpetas compartidas** ➡️ **Preferencias de carpetas compartidas...**
-2. Pulsa en el botón **Añadir carpeta (+)**:
-   * **Ruta de la carpeta**: Selecciona cualquier carpeta de tu ordenador (por ejemplo, una carpeta en tu Escritorio).
-   * **Nombre de la carpeta**: Escribe **`trabajo`** (en minúsculas).
-   * Marca las casillas **Automontar** y **Hacer permanente**.
-3. Pulsa **Aceptar**.
-
-> Al arrancar la máquina virtual, la carpeta se montará automáticamente en `/home/alumno/trabajo`.  
-> Si la añades con la máquina ya encendida, solo ejecuta en la terminal:
-> ```bash
-> montar-trabajo
-> ```
-
----
-
-## 🤖 Herramientas de IA y Agentes preinstaladas
-
-* **`antigravity-cli` (`agy`)**: CLI oficial de Google Antigravity.
-* **`opencode`**: Entorno CLI y TUI para agentes de código autónomos.
-* **`herdr`**: Multiplexor de terminales para agentes de IA (con plugins de estado y skills instalados para `antigravity-cli` y `opencode`).
+### 2. Estructura de Contexto en `~/trabajo`
+```text
+~/trabajo/
+├── proyectos/             <-- Proyectos desarrollados con IntelliJ IDEA en el host
+├── examenes-anteriores/   <-- Enunciados y exámenes de cursos previos para dar contexto al agente
+├── apuntes/               <-- Guías y teoría en PDF o Markdown
+├── CRITERIOS_EVALUACION.md<-- Criterios y rúbricas docentes leídos por el agente
+├── AGENTS.md              <-- Reglas del rol pedagógico del agente
+└── LEEME.txt              <-- Resumen de uso rápido para el alumno
+```
 
 ---
 
-## 📖 Instrucciones de instalación
+## 📁 Cómo vincular tu carpeta local de trabajo
 
-1. Descarga el archivo `ArchLinux.ova`.
-2. Abre **VirtualBox** y haz doble clic en el archivo descargado.
-3. Deja los valores por defecto y pulsa **Importar**.
-4. Inicia la máquina virtual.
-5. Inicia sesión con `alumno` / `alumno` o conéctate por SSH:
-   ```bash
-   ssh -p 2222 alumno@127.0.0.1
-   ```
+1. En VirtualBox: **Dispositivos ➡️ Carpetas compartidas ➡️ Preferencias...**
+2. Añade (+) tu carpeta local (donde guardas tus proyectos de IntelliJ).
+3. Nombre de la carpeta: **`trabajo`**
+4. Marca: **Automontar** y **Hacer permanente**.
+5. Al arrancar la VM se montará sola en `~/trabajo` (o escribe `montar-trabajo` en la terminal).
