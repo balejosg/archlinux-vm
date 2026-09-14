@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caso de Estudio: Cómo se creó esta VM con un Agente de IA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition">
+          A
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight text-white group-hover:text-cyan-300 transition">Arch Linux VM</h1>
+          <p class="text-xs text-cyan-400 font-medium">Caso de Estudio • Creación con IA Agéntica</p>
+        </div>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white transition">
+          ⬅ Volver a Descargas
+        </a>
+        <a href="https://github.com/balejosg/archlinux-vm" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <div class="text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-medium">
+        <span>💡</span> Desmitificando los Agentes de IA • Transcripción Real
+      </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+        De una idea a producción <br/>
+        <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">en una sola conversación</span>
+      </h2>
+      <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
+        Existe el mito de que los agentes de IA son difíciles de usar o que solo escriben respuestas de texto. Esta página web, el repositorio en GitHub y la máquina virtual completa de Arch Linux para 27 alumnos de DAM 1 se crearon **exclusivamente mediante esta conversación en lenguaje natural**.
+      </p>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 max-w-3xl mx-auto">
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4">
+          <p class="text-2xl font-bold text-cyan-400">0</p>
+          <p class="text-xs text-slate-400 mt-1">Comandos escritos a mano por el profesor</p>
+        </div>
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4">
+          <p class="text-2xl font-bold text-cyan-400">8</p>
+          <p class="text-xs text-slate-400 mt-1">Peticiones en español coloquial</p>
+        </div>
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4">
+          <p class="text-2xl font-bold text-cyan-400">100%</p>
+          <p class="text-xs text-slate-400 mt-1">Infraestructura automatizada por el agente</p>
+        </div>
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4">
+          <p class="text-2xl font-bold text-cyan-400">1</p>
+          <p class="text-xs text-slate-400 mt-1">Tutor Pedagógico Socrático funcional</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline of Prompts and Actions -->
+    <div class="mt-16 space-y-8">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span>💬</span> La Conversación Paso a Paso
+        </h3>
+        <span class="text-xs text-slate-400">Transcripción real • Sesión completa</span>
+      </div>
+
+      <!-- Paso 1 -->
+      <div class="bg-slate-800/50 border border-slate-700/70 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Paso 1 • Creación de la VM</span>
+          <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full font-mono">VirtualBox & Arch</span>
+        </div>
+        
+        <!-- User Prompt -->
+        <div class="bg-slate-900 border border-cyan-900/50 rounded-xl p-4 text-sm text-cyan-100 flex items-start gap-3">
+          <span class="bg-cyan-500/20 text-cyan-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <p class="italic">«quiero que me prepares una vm con arch para Virtualbox. Debe tener un usuario de tipo sudo y un servidor ssh. el usuario será alumno:alumno»</p>
+        </div>
+
+        <!-- Agent Action -->
+        <div class="text-xs text-slate-300 space-y-2 pl-3 border-l-2 border-slate-700">
+          <p class="font-semibold text-slate-200">🛠️ Qué ejecutó el agente de forma autónoma:</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Descargó la imagen oficial de Arch Linux (resolviendo caídas de red de forma automática).</li>
+            <li>Convirtió la imagen a formato disco VDI dinámico de 40 GB.</li>
+            <li>Registró la máquina en VirtualBox con 2 CPUs, 2 GB RAM y reenvío NAT en puerto 2222.</li>
+            <li>Arrancó la VM en modo headless, creó el usuario <code class="text-cyan-300">alumno</code>, configuró sudoers y reinició el servicio SSH.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Paso 2 -->
+      <div class="bg-slate-800/50 border border-slate-700/70 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Paso 2 • Pedagogía y Claridad</span>
+          <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full font-mono">Analogías</span>
+        </div>
+
+        <div class="bg-slate-900 border border-indigo-900/50 rounded-xl p-4 text-sm text-indigo-100 flex items-start gap-3">
+          <span class="bg-indigo-500/20 text-indigo-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <p class="italic">«qué es sudo? / explicate más sencillo»</p>
+        </div>
+
+        <div class="text-xs text-slate-300 space-y-2 pl-3 border-l-2 border-slate-700">
+          <p class="font-semibold text-slate-200">🛠️ Respuesta del agente:</p>
+          <p class="text-slate-400">
+            Aterrizó el concepto técnico con la analogía del botón <em>«Ejecutar como administrador»</em> de Windows y la metáfora de la llave maestra de un empleado de oficina, lista para explicárselo a alumnos sin experiencia previa en Linux.
+          </p>
+        </div>
+      </div>
+
+      <!-- Paso 3 -->
+      <div class="bg-slate-800/50 border border-slate-700/70 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Paso 3 • Resolución de Cuello de Botella</span>
+          <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full font-mono">Red Local</span>
+        </div>
+
+        <div class="bg-slate-900 border border-amber-900/50 rounded-xl p-4 text-sm text-amber-100 flex items-start gap-3">
+          <span class="bg-amber-500/20 text-amber-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <p class="italic">«Quiero que mis alumnos se puedan descargar la máquina pero todos compartimos una misma red con poco ancho de banda. Son 27»</p>
+        </div>
+
+        <div class="text-xs text-slate-300 space-y-2 pl-3 border-l-2 border-slate-700">
+          <p class="font-semibold text-slate-200">🛠️ Qué ejecutó el agente:</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Calculó el impacto de 27 descargas simultáneas (más de 16 GB colapsando el WiFi del centro).</li>
+            <li>Consultó la IP local de la máquina anfitriona (<code class="text-amber-300">10.230.121.93</code>).</li>
+            <li>Propuso servir el archivo en la propia red local (0 KB de internet consumidos) mediante un servidor HTTP local y rotación por pendrives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Paso 4 -->
+      <div class="bg-slate-800/50 border border-slate-700/70 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Paso 4 • Despliegue en la Nube</span>
+          <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full font-mono">GitHub Pages</span>
+        </div>
+
+        <div class="bg-slate-900 border border-emerald-900/50 rounded-xl p-4 text-sm text-emerald-100 flex items-start gap-3">
+          <span class="bg-emerald-500/20 text-emerald-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <p class="italic">«subelo a github y crea una ghpages con el enlace de descarga»</p>
+        </div>
+
+        <div class="text-xs text-slate-300 space-y-2 pl-3 border-l-2 border-slate-700">
+          <p class="font-semibold text-slate-200">🛠️ Qué ejecutó el agente:</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Exportó la máquina virtual al formato estándar <code class="text-emerald-300">ArchLinux.ova</code>.</li>
+            <li>Creó el repositorio público <code class="text-emerald-300">balejosg/archlinux-vm</code> mediante la API de GitHub.</li>
+            <li>Diseñó y programó la web en HTML5 y Tailwind CSS con botones interactivos para copiar credenciales.</li>
+            <li>Habilitó GitHub Pages y subió el archivo de 600 MB a una Release oficial sorteando el límite de 100 MB de Git.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Paso 5 & 6 -->
+      <div class="bg-slate-800/50 border border-slate-700/70 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-purple-400 uppercase tracking-wider">Paso 5 y 6 • Localización & Stack de Agentes</span>
+          <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full font-mono">Arch Linux Stack</span>
+        </div>
+
+        <div class="bg-slate-900 border border-purple-900/50 rounded-xl p-4 text-sm text-purple-100 flex items-start gap-3">
+          <span class="bg-purple-500/20 text-purple-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <p class="italic">«quiero que hagas que la vm tenga localización españa-españa tambien para teclado y que instales antigravity-cli, opencode y herdr en ella. haz que herdr sea compatible con ambos. actualiza tambien el sistema»</p>
+        </div>
+
+        <div class="text-xs text-slate-300 space-y-2 pl-3 border-l-2 border-slate-700">
+          <p class="font-semibold text-slate-200">🛠️ Qué ejecutó el agente:</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Configuró locale <code class="text-purple-300">es_ES.UTF-8</code>, zona horaria <code class="text-purple-300">Europe/Madrid</code> y teclado <code class="text-purple-300">KEYMAP=es</code> tanto para consola como para X11.</li>
+            <li>Instaló <code class="text-purple-300">antigravity-cli</code> (alias <code class="text-purple-300">agy</code>), <code class="text-purple-300">opencode</code> y <code class="text-purple-300">herdr</code>.</li>
+            <li>Instaló las integraciones y plugins oficiales de Herdr para ambos agentes, dotándolos de soporte cruzado.</li>
+            <li>Ejecutó <code class="text-purple-300">pacman -Syu</code>, actualizando el Kernel a Linux 7.2.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Paso 7 -->
+      <div class="bg-slate-800/50 border border-slate-700/70 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Paso 7 • Carpeta Compartida Host-Guest</span>
+          <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full font-mono">Workflow IntelliJ</span>
+        </div>
+
+        <div class="bg-slate-900 border border-blue-900/50 rounded-xl p-4 text-sm text-blue-100 flex items-start gap-3">
+          <span class="bg-blue-500/20 text-blue-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <p class="italic">«quiero hacer que se comparta una carpeta de trabajo dentro de la $HOME de alumno con la máquina host. Puede venir la vm ya preconfigurada así?»</p>
+        </div>
+
+        <div class="text-xs text-slate-300 space-y-2 pl-3 border-l-2 border-slate-700">
+          <p class="font-semibold text-slate-200">🛠️ Qué ejecutó el agente:</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Preconfiguró <code class="text-blue-300">/etc/fstab</code> con <code class="text-blue-300">nofail</code> para que la máquina no falle si el alumno no ha vinculado la carpeta aún.</li>
+            <li>Asignó permisos automáticos <code class="text-blue-300">uid=1001,gid=1001</code> para que los archivos pertenezcan al alumno.</li>
+            <li>Creó el comando <code class="text-blue-300">montar-trabajo</code> sin contraseña para sincronización en caliente sin reiniciar.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Paso 8 -->
+      <div class="bg-slate-800/50 border border-slate-700/70 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-rose-400 uppercase tracking-wider">Paso 8 • Especialización Pedagógica DAM 1</span>
+          <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full font-mono">Tutor Socrático</span>
+        </div>
+
+        <div class="bg-slate-900 border border-rose-900/50 rounded-xl p-4 text-sm text-rose-100 flex items-start gap-3">
+          <span class="bg-rose-500/20 text-rose-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <p class="italic">«introducirías algo más para que pueda ser usada por alumnos de programación de DAM1? Busco que los agentes sirvan para guiar el aprendizaje práctico...» ➡️ «hazlo»</p>
+        </div>
+
+        <div class="text-xs text-slate-300 space-y-2 pl-3 border-l-2 border-slate-700">
+          <p class="font-semibold text-slate-200">🛠️ Qué ejecutó el agente:</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Instaló <strong>OpenJDK 21 LTS</strong> y <strong>Apache Maven</strong> en la VM para compilar y probar código Java en segundo plano.</li>
+            <li>Configuró el archivo <code class="text-rose-300">AGENTS.md</code> que obliga a los agentes a actuar en <strong>modo socrático</strong>: prohibido dar la solución directa; deben ofrecer pistas progresivas y explicar por qué ocurren las excepciones.</li>
+            <li>Creó la plantilla de trabajo con carpetas para <code class="text-rose-300">examenes-anteriores/</code>, <code class="text-rose-300">apuntes/</code> y el archivo <code class="text-rose-300">CRITERIOS_EVALUACION.md</code>.</li>
+            <li>Exportó la release definitiva <strong>v1.3.0</strong> y actualizó la web de descargas.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Takeaways / Demystification Section -->
+    <div class="mt-16 bg-slate-800/60 border border-slate-700/80 rounded-2xl p-8 backdrop-blur">
+      <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span>✨</span> ¿Qué nos enseña este caso de estudio?
+      </h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm mt-6">
+        <div class="space-y-2">
+          <h4 class="font-bold text-cyan-300">1. Los agentes no son solo texto</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Un chatbot te habría dado una lista de 40 comandos para que los teclearas tú en tu terminal. Un <strong>agente</strong> toma las herramientas del sistema (VirtualBox, Git, package managers, SSH) y <strong>hace el trabajo por ti</strong>.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-cyan-300">2. El valor está en la visión del humano</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            El profesor no necesitó ser experto en scripts de VirtualBox. Su valor residió en definir el <strong>contexto pedagógico real</strong>: cuántos alumnos eran, las limitaciones de red del aula y cómo aprende un estudiante de DAM 1.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-cyan-300">3. Solución a problemas imprevistos</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Cuando la descarga de la imagen se cortó a mitad o cuando un comando requirió privilegios especiales, el agente se adaptó, buscó réplicas más rápidas y corrigió los errores sin pedir auxilio.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-slate-700/80 text-center">
+        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 font-bold text-white transition text-sm">
+          Descargar la Máquina Virtual Resultante (v1.3.0)
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-xs text-slate-500 py-6 border-t border-slate-800">
+      <p>Caso de estudio real generado a partir de una sesión de programación en parejas entre un docente y Antigravity.</p>
+    </footer>
+  </main>
+
+</body>
+</html>
