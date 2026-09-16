@@ -6,6 +6,7 @@ Máquina virtual oficial de Arch Linux configurada específicamente para el mód
 Puedes descargar el archivo `.ova` listo para importar en VirtualBox desde la web oficial o directamente desde GitHub Releases:
 
 * 🌐 **Página Web / GitHub Pages**: [https://balejosg.github.io/archlinux-vm/](https://balejosg.github.io/archlinux-vm/)
+* 📖 **Caso de Estudio (Cómo se hizo con IA)**: [https://balejosg.github.io/archlinux-vm/como-se-hizo.html](https://balejosg.github.io/archlinux-vm/como-se-hizo.html)
 * 📦 **Descarga directa (.ova, ~1.7 GB)**: [ArchLinux.ova (v1.3.0)](https://github.com/balejosg/archlinux-vm/releases/download/v1.3.0/ArchLinux.ova)
 
 ---
@@ -56,3 +57,20 @@ Los agentes (`agy` y `opencode`) vienen preconfigurados con directrices docentes
 3. Nombre de la carpeta: **`trabajo`**
 4. Marca: **Automontar** y **Hacer permanente**.
 5. Al arrancar la VM se montará sola en `~/trabajo` (o escribe `montar-trabajo` en la terminal).
+
+---
+
+## 💡 ¿Cómo se creó esta máquina y este proyecto con un Agente?
+
+Todo este proyecto (la descarga de la imagen oficial, la configuración de la VM, la web en GitHub Pages, la release y el rol pedagógico) fue generado íntegramente mediante una conversación en lenguaje natural con un agente de IA.
+
+Puedes ver la transcripción real y las instrucciones paso a paso para reproducirlo desde cualquier Linux aquí:
+👉 **[Ver el Caso de Estudio Completo](https://balejosg.github.io/archlinux-vm/como-se-hizo.html)**
+
+### Resumen rápido para reproducirlo:
+1. **En tu Linux (Host)**: Asegúrate de tener instalado `virtualbox` y `git`.
+2. **Elige tu agente**:
+   * **Opción A (Antigravity CLI)**: `paru -S antigravity-cli` y ejecuta `agy`.
+   * **Opción B (OpenCode - 100% Libre y Gratuito)**: `curl -fsSL https://opencode.ai/install | bash` y ejecuta `opencode`.
+3. **Pega la primera petición**:
+   > *«quiero que me prepares una vm con arch para Virtualbox. Debe tener un usuario de tipo sudo y un servidor ssh. el usuario será alumno:alumno»*

@@ -43,7 +43,7 @@
   <main class="max-w-4xl mx-auto px-6 py-12">
     <div class="text-center space-y-4">
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-medium">
-        <span>💡</span> Desmitificando los Agentes de IA • Transcripción Real
+        <span>💡</span> Desmitificando los Agentes de IA • Caso Real
       </div>
       <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
         De una idea a producción <br/>
@@ -60,7 +60,7 @@
           <p class="text-xs text-slate-400 mt-1">Comandos escritos a mano por el profesor</p>
         </div>
         <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4">
-          <p class="text-2xl font-bold text-cyan-400">8</p>
+          <p class="text-2xl font-bold text-cyan-400">9</p>
           <p class="text-xs text-slate-400 mt-1">Peticiones en español coloquial</p>
         </div>
         <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4">
@@ -74,13 +74,96 @@
       </div>
     </div>
 
+    <!-- How to Reproduce from a Linux Machine (Prerequisites & Launch) -->
+    <div class="mt-14 bg-gradient-to-br from-slate-800/90 to-slate-800/40 border border-cyan-800/40 rounded-2xl p-6 md:p-8 backdrop-blur shadow-xl">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 font-bold text-sm">
+          0
+        </div>
+        <h3 class="text-xl md:text-2xl font-bold text-white">
+          Punto de partida: Cómo reproducir esto desde cualquier máquina Linux
+        </h3>
+      </div>
+      <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+        ¿Qué necesitas tener instalado en tu propio PC con Linux para poder abrir una terminal, hablarle al agente en español y conseguir exactamente este mismo resultado?
+      </p>
+
+      <!-- Step 1: Base system packages -->
+      <div class="space-y-6">
+        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-2">
+          <h4 class="font-bold text-white text-sm flex items-center gap-2">
+            <span class="text-cyan-400">1.</span> Herramientas base en tu Linux (Host)
+          </h4>
+          <p class="text-xs text-slate-400">
+            Solo necesitas tener instalados <strong>VirtualBox</strong> (el hipervisor que controlará el agente) y <strong>Git</strong> con la CLI de GitHub (opcional si quieres que suba las releases y cree la web):
+          </p>
+          <div class="bg-slate-950 p-2.5 rounded-lg font-mono text-xs text-cyan-300 overflow-x-auto">
+            # En Arch / CachyOS / Manjaro:<br/>
+            sudo pacman -S virtualbox virtualbox-host-modules-arch git github-cli<br/><br/>
+            # En Ubuntu / Debian / Mint:<br/>
+            sudo apt update && sudo apt install virtualbox git gh
+          </div>
+        </div>
+
+        <!-- Step 2: Choose Agent (Antigravity or OpenCode) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Option A: Antigravity CLI -->
+          <div class="bg-slate-900/90 border border-cyan-900/60 rounded-xl p-5 space-y-3 relative">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Opción A (La usada aquí)</span>
+              <span class="text-[10px] bg-cyan-950 text-cyan-300 border border-cyan-800 px-2 py-0.5 rounded-full font-mono">Google agy</span>
+            </div>
+            <h5 class="font-bold text-white text-base">Antigravity CLI</h5>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Plataforma agéntica avanzada de Google con herramientas nativas de terminal, control de tareas y ejecución autónoma.
+            </p>
+            <div class="text-xs text-slate-300 font-mono bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-1">
+              <p class="text-slate-500"># Instalar (en Arch vía AUR):</p>
+              <p class="text-cyan-300">paru -S antigravity-cli</p>
+              <p class="text-slate-500 mt-2"># Iniciar la sesión:</p>
+              <p class="text-cyan-300">cd ~ && agy</p>
+            </div>
+            <p class="text-[11px] text-slate-500">Requiere cuenta con acceso a Antigravity.</p>
+          </div>
+
+          <!-- Option B: OpenCode (100% Free & Open Source) -->
+          <div class="bg-slate-900/90 border border-emerald-900/60 rounded-xl p-5 space-y-3 relative">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Opción B (Alternativa Libre)</span>
+              <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded-full font-mono">Open Source</span>
+            </div>
+            <h5 class="font-bold text-white text-base">OpenCode CLI</h5>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              <strong>100% libre, sin licencias propietarias ni de pago</strong>. Permite usar modelos gratuitos incluidos, tus propias API keys gratuitas (Google Gemini API, Copilot, Anthropic, OpenAI) o modelos locales con Ollama.
+            </p>
+            <div class="text-xs text-slate-300 font-mono bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-1">
+              <p class="text-slate-500"># Instalar en 1 comando (cualquier Linux):</p>
+              <p class="text-emerald-300">curl -fsSL https://opencode.ai/install | bash</p>
+              <p class="text-slate-500 mt-2"># Iniciar la sesión:</p>
+              <p class="text-emerald-300">cd ~ && opencode</p>
+            </div>
+            <p class="text-[11px] text-emerald-400 font-medium">✨ Ideal para quienes no tengan licencia comercial de Antigravity.</p>
+          </div>
+        </div>
+
+        <!-- How to Start the Conversation -->
+        <div class="bg-cyan-950/30 border border-cyan-800/40 rounded-xl p-4 text-xs md:text-sm text-cyan-200 flex items-start gap-3">
+          <span class="text-lg">👉</span>
+          <div>
+            <strong>Una vez abierto <code class="bg-slate-800 px-1.5 py-0.5 rounded text-white font-mono">agy</code> o <code class="bg-slate-800 px-1.5 py-0.5 rounded text-white font-mono">opencode</code>:</strong>
+            Simplemente pega el primer mensaje en español que verás en el <strong>Paso 1</strong> a continuación. El agente se encargará de todo el proceso técnico paso a paso tal y como se documenta abajo.
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Timeline of Prompts and Actions -->
     <div class="mt-16 space-y-8">
       <div class="flex items-center justify-between border-b border-slate-800 pb-4">
         <h3 class="text-2xl font-bold text-white flex items-center gap-2">
-          <span>💬</span> La Conversación Paso a Paso
+          <span>💬</span> La Conversación Real Paso a Paso
         </h3>
-        <span class="text-xs text-slate-400">Transcripción real • Sesión completa</span>
+        <span class="text-xs text-slate-400">Transcripción íntegra • 9 pasos reales</span>
       </div>
 
       <!-- Paso 1 -->
@@ -92,7 +175,7 @@
         
         <!-- User Prompt -->
         <div class="bg-slate-900 border border-cyan-900/50 rounded-xl p-4 text-sm text-cyan-100 flex items-start gap-3">
-          <span class="bg-cyan-500/20 text-cyan-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <span class="bg-cyan-500/20 text-cyan-300 p-1.5 rounded-lg text-xs font-bold shrink-0">PROFESOR</span>
           <p class="italic">«quiero que me prepares una vm con arch para Virtualbox. Debe tener un usuario de tipo sudo y un servidor ssh. el usuario será alumno:alumno»</p>
         </div>
 
@@ -116,7 +199,7 @@
         </div>
 
         <div class="bg-slate-900 border border-indigo-900/50 rounded-xl p-4 text-sm text-indigo-100 flex items-start gap-3">
-          <span class="bg-indigo-500/20 text-indigo-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <span class="bg-indigo-500/20 text-indigo-300 p-1.5 rounded-lg text-xs font-bold shrink-0">PROFESOR</span>
           <p class="italic">«qué es sudo? / explicate más sencillo»</p>
         </div>
 
@@ -136,7 +219,7 @@
         </div>
 
         <div class="bg-slate-900 border border-amber-900/50 rounded-xl p-4 text-sm text-amber-100 flex items-start gap-3">
-          <span class="bg-amber-500/20 text-amber-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <span class="bg-amber-500/20 text-amber-300 p-1.5 rounded-lg text-xs font-bold shrink-0">PROFESOR</span>
           <p class="italic">«Quiero que mis alumnos se puedan descargar la máquina pero todos compartimos una misma red con poco ancho de banda. Son 27»</p>
         </div>
 
@@ -158,7 +241,7 @@
         </div>
 
         <div class="bg-slate-900 border border-emerald-900/50 rounded-xl p-4 text-sm text-emerald-100 flex items-start gap-3">
-          <span class="bg-emerald-500/20 text-emerald-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <span class="bg-emerald-500/20 text-emerald-300 p-1.5 rounded-lg text-xs font-bold shrink-0">PROFESOR</span>
           <p class="italic">«subelo a github y crea una ghpages con el enlace de descarga»</p>
         </div>
 
@@ -181,7 +264,7 @@
         </div>
 
         <div class="bg-slate-900 border border-purple-900/50 rounded-xl p-4 text-sm text-purple-100 flex items-start gap-3">
-          <span class="bg-purple-500/20 text-purple-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <span class="bg-purple-500/20 text-purple-300 p-1.5 rounded-lg text-xs font-bold shrink-0">PROFESOR</span>
           <p class="italic">«quiero que hagas que la vm tenga localización españa-españa tambien para teclado y que instales antigravity-cli, opencode y herdr en ella. haz que herdr sea compatible con ambos. actualiza tambien el sistema»</p>
         </div>
 
@@ -204,7 +287,7 @@
         </div>
 
         <div class="bg-slate-900 border border-blue-900/50 rounded-xl p-4 text-sm text-blue-100 flex items-start gap-3">
-          <span class="bg-blue-500/20 text-blue-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <span class="bg-blue-500/20 text-blue-300 p-1.5 rounded-lg text-xs font-bold shrink-0">PROFESOR</span>
           <p class="italic">«quiero hacer que se comparta una carpeta de trabajo dentro de la $HOME de alumno con la máquina host. Puede venir la vm ya preconfigurada así?»</p>
         </div>
 
@@ -226,7 +309,7 @@
         </div>
 
         <div class="bg-slate-900 border border-rose-900/50 rounded-xl p-4 text-sm text-rose-100 flex items-start gap-3">
-          <span class="bg-rose-500/20 text-rose-300 p-1.5 rounded-lg text-xs font-bold">PROFESOR</span>
+          <span class="bg-rose-500/20 text-rose-300 p-1.5 rounded-lg text-xs font-bold shrink-0">PROFESOR</span>
           <p class="italic">«introducirías algo más para que pueda ser usada por alumnos de programación de DAM1? Busco que los agentes sirvan para guiar el aprendizaje práctico...» ➡️ «hazlo»</p>
         </div>
 
@@ -237,6 +320,29 @@
             <li>Configuró el archivo <code class="text-rose-300">AGENTS.md</code> que obliga a los agentes a actuar en <strong>modo socrático</strong>: prohibido dar la solución directa; deben ofrecer pistas progresivas y explicar por qué ocurren las excepciones.</li>
             <li>Creó la plantilla de trabajo con carpetas para <code class="text-rose-300">examenes-anteriores/</code>, <code class="text-rose-300">apuntes/</code> y el archivo <code class="text-rose-300">CRITERIOS_EVALUACION.md</code>.</li>
             <li>Exportó la release definitiva <strong>v1.3.0</strong> y actualizó la web de descargas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Paso 9 (Nuevo - Meta-Petición de Transparencia) -->
+      <div class="bg-gradient-to-r from-slate-800/80 to-cyan-950/40 border border-cyan-500/50 rounded-2xl p-6 space-y-4 shadow-lg">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-cyan-300 uppercase tracking-wider">Paso 9 • La Petición de Transparencia (Este mismo paso)</span>
+          <span class="text-xs bg-cyan-900/80 text-cyan-200 px-2.5 py-1 rounded-full font-mono">Meta-Documentación</span>
+        </div>
+
+        <div class="bg-slate-900 border border-cyan-500/40 rounded-xl p-4 text-sm text-cyan-100 flex items-start gap-3 shadow-inner">
+          <span class="bg-cyan-500/30 text-cyan-300 p-1.5 rounded-lg text-xs font-bold shrink-0">PROFESOR</span>
+          <p class="italic font-medium">«Quiero que incluyas los pasos a seguir para poder haber llegado a la conversación del agente en esta máquina. Toma una máquina linux como punto de partida y da la alternativa de Opencode para los que no tengan una licencia que les permita usar agy. Añade este mismo mensaje a la conversación de la web.»</p>
+        </div>
+
+        <div class="text-xs text-slate-300 space-y-2 pl-3 border-l-2 border-cyan-500">
+          <p class="font-semibold text-slate-200">🛠️ Qué ejecutó el agente:</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Añadió la sección completa de <strong>«Punto de partida desde Linux»</strong> al principio de esta página, detallando paquetes necesarios (VirtualBox, Git, GitHub CLI).</li>
+            <li>Documentó la alternativa 100% abierta y gratuita con <strong>OpenCode</strong> para que cualquier usuario pueda lograr el mismo resultado sin licencias de pago.</li>
+            <li>Incorporó esta última petición como el <strong>Paso 9</strong> del caso de estudio, demostrando que la documentación se actualiza en tiempo real durante el diálogo.</li>
+            <li>Hizo commit y push a GitHub, desplegando los cambios en GitHub Pages al instante.</li>
           </ul>
         </div>
       </div>
